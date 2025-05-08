@@ -7,11 +7,11 @@ public class SortingDriver {
 
     public static void main(String[] args) {
 
-        // Generate array of random Integers
+        // Generate an array of random integers:
         Integer[] arr = IntStream.generate(() -> (int) (Math.random() * 50000))
-                                 .boxed()
-                                 .limit(1000)
-                                 .toArray(Integer[]::new);
+                .boxed()
+                .limit(1000)
+                .toArray(Integer[]::new);
 
         Integer[] copy1 = copyArray(arr);
         Integer[] copy2 = copyArray(arr);
@@ -42,17 +42,25 @@ public class SortingDriver {
             System.out.println("\nFirst 10 of Array...");
 
             for (T i : obj) {
+
                 System.out.println(counter + ": " + i.toString());
 
                 if (counter >= 10) {
+
                     break;
+
                 }
+
                 counter++;
+
             }
 
         } else {
+
             System.out.println("Array is null.");
+
         }
+
     }
 
     private static <T> T[] copyArray(T[] obj) {
@@ -60,6 +68,7 @@ public class SortingDriver {
         T[] copy = (T[]) Arrays.copyOf(obj, obj.length);
 
         return copy;
+
     }
 
 }

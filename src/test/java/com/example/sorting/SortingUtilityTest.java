@@ -18,7 +18,8 @@ public class SortingUtilityTest {
 
     @BeforeEach
     public void before() {
-        // Generate array of random Integers
+
+        // Generate an array of random integers:
         array = IntStream.generate(() -> (int) (Math.random() * 50000))
                 .boxed()
                 .limit(1000)
@@ -26,6 +27,7 @@ public class SortingUtilityTest {
 
         expected = Arrays.stream(array)
                 .collect(Collectors.toList());
+
     }
 
     @Test
@@ -40,6 +42,7 @@ public class SortingUtilityTest {
         boolean result = actual.equals(expected);
 
         assertTrue(result);
+
     }
 
     @Test
@@ -54,6 +57,7 @@ public class SortingUtilityTest {
         boolean result = actual.equals(expected);
 
         assertTrue(result);
+
     }
 
     @Test
@@ -68,6 +72,7 @@ public class SortingUtilityTest {
         boolean result = actual.equals(expected);
 
         assertTrue(result);
+
     }
 
 }
